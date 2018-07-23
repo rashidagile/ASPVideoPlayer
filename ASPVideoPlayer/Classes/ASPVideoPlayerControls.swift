@@ -133,6 +133,9 @@ open class ASPBasicControls: UIView, VideoPlayerControls, VideoPlayerSeekControl
 
     open var nextButtonHidden: Bool = true
     open var previousButtonHidden: Bool = true
+    open var playPauseButtonHidden: Bool = true
+    open var resizeButtonHidden: Bool = true
+    open var progressSliderHidden: Bool = true
 }
 
 @IBDesignable final public class ASPVideoPlayerControls: ASPBasicControls {
@@ -166,6 +169,40 @@ open class ASPBasicControls: UIView, VideoPlayerControls, VideoPlayerSeekControl
         }
         get {
             return previousButton.isHidden
+        }
+    }
+    /**
+     Sets the visibility of the Play Pause button.
+     */
+    open override var playPauseButtonHidden: Bool {
+        set {
+            playPauseButton.isHidden = newValue
+        }
+        get {
+            return playPauseButton.isHidden
+        }
+    }
+    /**
+     Sets the visibility of the Resize button.
+     */
+    open override var resizeButtonHidden: Bool {
+        set {
+            resizeButton.isHidden = newValue
+        }
+        get {
+            return resizeButton.isHidden
+        }
+    }
+    
+    /**
+     Sets the visibility of the Progress Slider.
+     */
+    open override var progressSliderHidden: Bool {
+        set {
+            progressSlider.isHidden = newValue
+        }
+        get {
+            return progressSlider.isHidden
         }
     }
 

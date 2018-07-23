@@ -35,6 +35,10 @@ class PlayerViewController: UIViewController {
             self.isExpanded = isExpanded
             self.rotate()
         }
+        
+        videoPlayer.videoPlayerControls.playPauseButtonHidden = true
+        videoPlayer.videoPlayerControls.resizeButtonHidden = true
+        videoPlayer.videoPlayerControls.progressSliderHidden = true
 
         videoPlayer.delegate = self
     }
